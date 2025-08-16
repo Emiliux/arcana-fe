@@ -391,7 +391,7 @@ export class ApexComponent implements OnInit {
         bar: {
           horizontal: true,
           barHeight: '30%',
-          endingShape: 'rounded'
+          borderRadius: 8
         }
       },
       grid: {

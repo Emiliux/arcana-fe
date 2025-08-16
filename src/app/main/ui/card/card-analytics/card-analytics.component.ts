@@ -158,7 +158,7 @@ export class CardAnalyticsComponent implements OnInit, OnDestroy {
       plotOptions: {
         bar: {
           columnWidth: '17%',
-          endingShape: 'rounded'
+          borderRadius: 8
         }
       },
       colors: [colors.solid.primary, colors.solid.warning],
@@ -592,7 +592,7 @@ export class CardAnalyticsComponent implements OnInit, OnDestroy {
         bar: {
           columnWidth: '45%',
           distributed: true,
-          endingShape: 'rounded'
+          borderRadius: 8
         }
       },
       tooltip: {
