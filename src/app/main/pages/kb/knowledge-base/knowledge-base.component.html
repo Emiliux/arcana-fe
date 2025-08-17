@@ -41,7 +41,7 @@
     <section id="knowledge-base-content">
       <div class="row kb-search-content-info match-height">
         <div
-          *ngFor="let knowledgeBaseRef of data.knowledgeBase | filter: searchText:'title'"
+          *ngFor="let knowledgeBaseRef of data.knowledgeBase | filter : searchText : 'title'"
           class="col-md-4 col-sm-6 col-12 kb-search-content"
         >
           <div class="card">
@@ -56,7 +56,9 @@
         </div>
 
         <!-- no result -->
-        <ng-container *ngIf="(data.knowledgeBase | filter: searchText:'title').length; else noResults"></ng-container>
+        <ng-container
+          *ngIf="(data.knowledgeBase | filter : searchText : 'title').length; else noResults"
+        ></ng-container>
         <ng-template #noResults>
           <div class="col-12 text-center no-result">
             <h4 class="mt-4">Search result not found!!</h4>

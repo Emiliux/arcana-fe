@@ -33,5 +33,4 @@ export class CustomDatepickerI18n extends NgbDatepickerI18n {
   getDayAriaLabel(date: NgbDateStruct): string {
     return `${date.day}-${date.month}-${date.year}`;
   }
-
 }

@@ -19,7 +19,10 @@
       <button class="email-favorite btn p-0" (click)="toggleStarred(); $event.stopPropagation()">
         <i
           class="fa"
-          [ngClass]="{ 'fa-star text-warning': email.isStarred === true, 'fa-star-o': email.isStarred === false }"
+          [ngClass]="{
+            'fa-star text-warning': email.isStarred === true,
+            'fa-star-o': email.isStarred === false
+          }"
         ></i>
       </button>
     </div>
@@ -44,7 +47,7 @@
             'bullet-danger': label === 'private'
           }"
         ></span>
-        <span class="mail-date">{{ email.time | date: 'short':'UTC' }}</span>
+        <span class="mail-date">{{ email.time | date : 'short' : 'UTC' }}</span>
       </div>
     </div>
     <div class="mail-message">

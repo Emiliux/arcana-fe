@@ -31,7 +31,7 @@
           placement="top"
           [ngbTooltip]="dat.key"
           class="card icon-card cursor-pointer text-center mb-2 mx-50"
-          *ngFor="let dat of data | keyvalue | filter: searchText:'key'; let i = index"
+          *ngFor="let dat of data | keyvalue | filter : searchText : 'key'; let i = index"
         >
           <div class="card-body">
             <div class="icon-wrapper">

@@ -40,10 +40,10 @@
   <!-- Sidebar Users start -->
   <div id="users-list" class="chat-user-list-wrapper list-group" [perfectScrollbar]>
     <h4 class="chat-list-title">Chats</h4>
-    <ng-container *ngIf="(chatUsers | filter: searchText:'fullName').length; else noResultsChats"></ng-container>
+    <ng-container *ngIf="(chatUsers | filter : searchText : 'fullName').length; else noResultsChats"></ng-container>
     <ul class="chat-users-list chat-list media-list">
       <li
-        *ngFor="let chatUser of chatUsers | filter: searchText:'fullName'; let i = index"
+        *ngFor="let chatUser of chatUsers | filter : searchText : 'fullName'; let i = index"
         [class.active]="selectedIndex === i"
         (click)="openChat(chatUser.id); toggleSidebar('chat-sidebar'); setIndex(i)"
       >
@@ -73,16 +73,16 @@
       </li>
 
       <ng-template #noResultsChats>
-        <li class="no-results" [ngClass]="{ show: (chatUsers | filter: searchText:'fullName').length <= 0 }">
+        <li class="no-results" [ngClass]="{ show: (chatUsers | filter : searchText : 'fullName').length <= 0 }">
           <h6 class="mb-0">No Chats Found</h6>
         </li>
       </ng-template>
     </ul>
     <h4 class="chat-list-title">Contacts</h4>
-    <ng-container *ngIf="(contacts | filter: searchText:'fullName').length; else noResultsContacts"></ng-container>
+    <ng-container *ngIf="(contacts | filter : searchText : 'fullName').length; else noResultsContacts"></ng-container>
     <ul class="chat-users-list contact-list media-list">
       <li
-        *ngFor="let contact of contacts | filter: searchText:'fullName'"
+        *ngFor="let contact of contacts | filter : searchText : 'fullName'"
         (click)="openChat(contact.id); toggleSidebar('chat-sidebar')"
       >
         <span class="avatar"
@@ -97,7 +97,7 @@
       </li>
 
       <ng-template #noResultsContacts>
-        <li class="no-results" [ngClass]="{ show: (contacts | filter: searchText:'fullName').length <= 0 }">
+        <li class="no-results" [ngClass]="{ show: (contacts | filter : searchText : 'fullName').length <= 0 }">
           <h6 class="mb-0">No Contacts Found</h6>
         </li>
       </ng-template>

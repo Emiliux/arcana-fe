@@ -1,0 +1,49 @@
+{
+  "extends": [
+    "plugin:import/typescript",
+    "plugin:import/angular"
+  ],
+  "rules": {
+    // Enforce import order and grouping
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    // Disable unresolved import check (TypeScript handles this)
+    "import/no-unresolved": "off",
+    // Disable unused modules check
+    "import/no-unused-modules": "off",
+    // Prevent duplicate imports
+    "import/no-duplicates": "error",
+    // Prevent circular imports
+    "import/no-cycle": "error",
+    // Prevent self-imports
+    "import/no-self-import": "error",
+    // Prevent unnecessary path segments
+    "import/no-useless-path-segments": "error",
+    // Allow relative parent imports
+    "import/no-relative-parent-imports": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
+    }
+  }
+}

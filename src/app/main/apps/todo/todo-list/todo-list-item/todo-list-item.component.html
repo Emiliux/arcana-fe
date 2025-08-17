@@ -36,7 +36,7 @@
           {{ tag }}
         </div>
       </div>
-      <small class="text-nowrap text-muted mr-1">{{ todo.dueDate | date: ' MMM d' }}</small>
+      <small class="text-nowrap text-muted mr-1">{{ todo.dueDate | date : ' MMM d' }}</small>
       <div class="avatar" *ngIf="todo.assignee?.avatar.length > 0; else customAvatar">
         <img src="{{ todo.assignee.avatar }}" alt="user-avatar" height="32" width="32" />
       </div>

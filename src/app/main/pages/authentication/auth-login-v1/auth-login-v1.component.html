@@ -9,7 +9,7 @@
         </a>
 
         <h4 class="card-title mb-1">Welcome to Arcana! 👋</h4>
-        <p class="card-text mb-2">Please sign-in to your account and start the adventure</p>
+        <p class="card-text mb-2">Please sign-in to your account</p>
 
         <form class="auth-login-form mt-2" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
@@ -69,12 +69,12 @@
               <div *ngIf="f.password.errors.required">Password is required</div>
             </div>
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <div class="custom-control custom-checkbox">
               <input class="custom-control-input" type="checkbox" id="remember-me" tabindex="3" />
               <label class="custom-control-label" for="remember-me"> Remember Me </label>
             </div>
-          </div>
+          </div> -->
           <button class="btn btn-primary btn-block" tabindex="4" rippleEffect>Sign in</button>
         </form>
 
@@ -85,7 +85,7 @@
           </a>
         </p>
 
-        <div class="divider my-2">
+        <!-- <div class="divider my-2">
           <div class="divider-text">or</div>
         </div>
 
@@ -102,7 +102,7 @@
           <a href="javascript:void(0)" class="btn btn-github">
             <i data-feather="github"></i>
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
     <!-- /Login v1 -->

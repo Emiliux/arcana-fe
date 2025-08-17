@@ -500,7 +500,9 @@ Email: {{ TDEmailVar }}
                             id="UDUserName"
                             formControlName="userName"
                             class="form-control"
-                            [ngClass]="{ 'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.userName.errors }"
+                            [ngClass]="{
+                              'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.userName.errors
+                            }"
                           />
                           <div
                             *ngIf="ReactiveUDFormSubmitted && ReactiveUDForm.userName.errors"
@@ -518,7 +520,9 @@ Email: {{ TDEmailVar }}
                             id="UDEmail"
                             formControlName="email"
                             class="form-control"
-                            [ngClass]="{ 'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.email.errors }"
+                            [ngClass]="{
+                              'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.email.errors
+                            }"
                           />
                           <div *ngIf="ReactiveUDFormSubmitted && ReactiveUDForm.email.errors" class="invalid-feedback">
                             <div *ngIf="ReactiveUDForm.email.errors.required">Email is required</div>
@@ -534,7 +538,9 @@ Email: {{ TDEmailVar }}
                             id="UDPassword"
                             formControlName="password"
                             class="form-control"
-                            [ngClass]="{ 'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.password.errors }"
+                            [ngClass]="{
+                              'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.password.errors
+                            }"
                           />
                           <div
                             *ngIf="ReactiveUDFormSubmitted && ReactiveUDForm.password.errors"
@@ -555,7 +561,9 @@ Email: {{ TDEmailVar }}
                             id="UDConfPassword"
                             formControlName="confPassword"
                             class="form-control"
-                            [ngClass]="{ 'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.confPassword.errors }"
+                            [ngClass]="{
+                              'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.confPassword.errors
+                            }"
                           />
                           <div
                             *ngIf="ReactiveUDFormSubmitted && ReactiveUDForm.confPassword.errors"
@@ -580,7 +588,9 @@ Email: {{ TDEmailVar }}
                             id="UDFirstName"
                             formControlName="firstName"
                             class="form-control"
-                            [ngClass]="{ 'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.firstName.errors }"
+                            [ngClass]="{
+                              'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.firstName.errors
+                            }"
                           />
                           <div
                             *ngIf="ReactiveUDFormSubmitted && ReactiveUDForm.firstName.errors"
@@ -598,7 +608,9 @@ Email: {{ TDEmailVar }}
                             id="UDLastName"
                             formControlName="lastName"
                             class="form-control"
-                            [ngClass]="{ 'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.lastName.errors }"
+                            [ngClass]="{
+                              'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.lastName.errors
+                            }"
                           />
                           <div
                             *ngIf="ReactiveUDFormSubmitted && ReactiveUDForm.lastName.errors"
@@ -615,7 +627,9 @@ Email: {{ TDEmailVar }}
                             id="UDCountry"
                             formControlName="country"
                             class="form-control"
-                            [ngClass]="{ 'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.country.errors }"
+                            [ngClass]="{
+                              'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.country.errors
+                            }"
                           >
                             <option value="USA">USA</option>
                             <option value="Germany">Germany</option>
@@ -637,7 +651,9 @@ Email: {{ TDEmailVar }}
                             id="UDLanguage"
                             formControlName="language"
                             class="form-control"
-                            [ngClass]="{ 'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.language.errors }"
+                            [ngClass]="{
+                              'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.language.errors
+                            }"
                           >
                             <option selected value="English">English</option>
                             <option value="Germany">Germany</option>
@@ -660,7 +676,9 @@ Email: {{ TDEmailVar }}
                             id="UDAge"
                             formControlName="age"
                             class="form-control"
-                            [ngClass]="{ 'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.age.errors }"
+                            [ngClass]="{
+                              'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.age.errors
+                            }"
                           />
                           <div *ngIf="ReactiveUDFormSubmitted && ReactiveUDForm.age.errors" class="invalid-feedback">
                             <div *ngIf="ReactiveUDForm.age.errors.required">Age is required</div>
@@ -675,7 +693,9 @@ Email: {{ TDEmailVar }}
                             id="UDPhoneNumber"
                             formControlName="phoneNumber"
                             class="form-control"
-                            [ngClass]="{ 'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.phoneNumber.errors }"
+                            [ngClass]="{
+                              'is-invalid': ReactiveUDFormSubmitted && ReactiveUDForm.phoneNumber.errors
+                            }"
                           />
                           <div
                             *ngIf="ReactiveUDFormSubmitted && ReactiveUDForm.phoneNumber.errors"

@@ -73,12 +73,17 @@
 
                   <!-- frequent answer and question  collapse  -->
                   <div class="accordion collapse-margin mt-2">
-                    <ng-container *ngIf="(data.payment.qandA | filter: searchText:'question').length; else noResults">
+                    <ng-container
+                      *ngIf="(data.payment.qandA | filter : searchText : 'question').length; else noResults"
+                    >
                       <ngb-accordion [destroyOnHide]="false" [closeOthers]="true" activeIds="paymentId1">
                         <ngb-panel
                           id="paymentId{{ i }}"
                           [cardClass]="'collapse-margin'"
-                          *ngFor="let paymentRef of data.payment.qandA | filter: searchText:'question'; let i = index"
+                          *ngFor="
+                            let paymentRef of data.payment.qandA | filter : searchText : 'question';
+                            let i = index
+                          "
                         >
                           <ng-template ngbPanelTitle>
                             <span>{{ paymentRef.question }}</span>
@@ -133,12 +138,17 @@
 
                   <!-- frequent answer and question  collapse  -->
                   <div class="accordion collapse-margin mt-2">
-                    <ng-container *ngIf="(data.delivery.qandA | filter: searchText:'question').length; else noResults">
+                    <ng-container
+                      *ngIf="(data.delivery.qandA | filter : searchText : 'question').length; else noResults"
+                    >
                       <ngb-accordion [destroyOnHide]="false" [closeOthers]="true" activeIds="deliveryId1">
                         <ngb-panel
                           id="deliveryId{{ i }}"
                           [cardClass]="'collapse-margin'"
-                          *ngFor="let deliveryRef of data.delivery.qandA | filter: searchText:'question'; let i = index"
+                          *ngFor="
+                            let deliveryRef of data.delivery.qandA | filter : searchText : 'question';
+                            let i = index
+                          "
                         >
                           <ng-template ngbPanelTitle>
                             <span>{{ deliveryRef.question }}</span>
@@ -195,14 +205,15 @@
                   <!-- frequent answer and question  collapse  -->
                   <div class="accordion collapse-margin mt-2">
                     <ng-container
-                      *ngIf="(data.cancellationReturn.qandA | filter: searchText:'question').length; else noResults"
+                      *ngIf="(data.cancellationReturn.qandA | filter : searchText : 'question').length; else noResults"
                     >
                       <ngb-accordion [destroyOnHide]="false" [closeOthers]="true" activeIds="cancellationReturnId1">
                         <ngb-panel
                           id="cancellationReturnId{{ i }}"
                           [cardClass]="'collapse-margin'"
                           *ngFor="
-                            let cancellationReturnRef of data.cancellationReturn.qandA | filter: searchText:'question';
+                            let cancellationReturnRef of data.cancellationReturn.qandA
+                              | filter : searchText : 'question';
                             let i = index
                           "
                         >
@@ -259,12 +270,17 @@
 
                   <!-- frequent answer and question  collapse  -->
                   <div class="accordion collapse-margin mt-2">
-                    <ng-container *ngIf="(data.myOrders.qandA | filter: searchText:'question').length; else noResults">
+                    <ng-container
+                      *ngIf="(data.myOrders.qandA | filter : searchText : 'question').length; else noResults"
+                    >
                       <ngb-accordion [destroyOnHide]="false" [closeOthers]="true" activeIds="myOrdersId1">
                         <ngb-panel
                           id="myOrdersId{{ i }}"
                           [cardClass]="'collapse-margin'"
-                          *ngFor="let myOrdersRef of data.myOrders.qandA | filter: searchText:'question'; let i = index"
+                          *ngFor="
+                            let myOrdersRef of data.myOrders.qandA | filter : searchText : 'question';
+                            let i = index
+                          "
                         >
                           <ng-template ngbPanelTitle>
                             <span>{{ myOrdersRef.question }}</span>
@@ -322,14 +338,14 @@
                   <!-- frequent answer and question  collapse  -->
                   <div class="accordion collapse-margin mt-2">
                     <ng-container
-                      *ngIf="(data.productServices.qandA | filter: searchText:'question').length; else noResults"
+                      *ngIf="(data.productServices.qandA | filter : searchText : 'question').length; else noResults"
                     >
                       <ngb-accordion [destroyOnHide]="false" [closeOthers]="true" activeIds="productServicesId1">
                         <ngb-panel
                           id="productServicesId{{ i }}"
                           [cardClass]="'collapse-margin'"
                           *ngFor="
-                            let productServicesRef of data.productServices.qandA | filter: searchText:'question';
+                            let productServicesRef of data.productServices.qandA | filter : searchText : 'question';
                             let i = index
                           "
                         >

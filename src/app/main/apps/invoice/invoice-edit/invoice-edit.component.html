@@ -117,7 +117,9 @@
                   <h6 class="mb-2">Invoice To:</h6>
                   <h6 class="mb-25">{{ apiData.client.name }}</h6>
                   <p class="card-text mb-25">{{ apiData.client.company }}</p>
-                  <p class="card-text mb-25">{{ apiData.client.address + ' ' + apiData.client.country }}</p>
+                  <p class="card-text mb-25">
+                    {{ apiData.client.address + ' ' + apiData.client.country }}
+                  </p>
                   <p class="card-text mb-25">{{ apiData.client.contact }}</p>
                   <p class="card-text mb-0">{{ apiData.client.companyEmail }}</p>
                 </div>

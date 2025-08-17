@@ -18,6 +18,13 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [FormRepeaterComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), CardSnippetModule, FormsModule, CoreCommonModule, ContentHeaderModule]
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    CardSnippetModule,
+    FormsModule,
+    CoreCommonModule,
+    ContentHeaderModule
+  ]
 })
 export class FormRepeaterModule {}

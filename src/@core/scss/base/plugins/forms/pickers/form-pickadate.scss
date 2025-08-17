@@ -88,7 +88,7 @@
         tr {
           td {
             .picker__day {
-              &:not(.picker__day--highlighted){
+              &:not(.picker__day--highlighted) {
                 color: $theme-dark-body-color;
               }
               &.picker__day--selected {

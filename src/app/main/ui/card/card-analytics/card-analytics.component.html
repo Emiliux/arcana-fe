@@ -91,7 +91,9 @@
               <div class="row pb-50">
                 <div class="col-lg-6 col-12 d-flex justify-content-between flex-column order-lg-1 order-2 mt-1 mt-lg-0">
                   <div class="mb-1 mb-lg-0">
-                    <h2 class="font-weight-bolder mb-25">{{ data.avgSessions.analyticsData.avgSessions }}</h2>
+                    <h2 class="font-weight-bolder mb-25">
+                      {{ data.avgSessions.analyticsData.avgSessions }}
+                    </h2>
                     <p class="card-text font-weight-bold mb-2">Avg Sessions</p>
                     <div class="font-medium-2">
                       <span class="text-success mr-25">{{ data.avgSessions.analyticsData.vsLastSevenDays }}</span>
@@ -319,11 +321,15 @@
               <div class="row border-top text-center mx-0">
                 <div class="col-6 border-right py-1">
                   <p class="card-text text-muted mb-0">Completed</p>
-                  <h3 class="font-weight-bolder mb-0">{{ data.goalOverview.analyticsData.completed }}</h3>
+                  <h3 class="font-weight-bolder mb-0">
+                    {{ data.goalOverview.analyticsData.completed }}
+                  </h3>
                 </div>
                 <div class="col-6 py-1">
                   <p class="card-text text-muted mb-0">In Progress</p>
-                  <h3 class="font-weight-bolder mb-0">{{ data.goalOverview.analyticsData.inProgress }}</h3>
+                  <h3 class="font-weight-bolder mb-0">
+                    {{ data.goalOverview.analyticsData.inProgress }}
+                  </h3>
                 </div>
               </div>
             </div>

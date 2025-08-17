@@ -87,43 +87,43 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        ContextMenuComponent,
-        BasicCustomContextMenuComponent,
-        AnimatedCustomContextMenuComponent,
-        SubMenuCustomContextMenuComponent
-    ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        HttpClientInMemoryWebApiModule.forRoot(FakeDbService, {
-            delay: 0,
-            passThruUnknownUrl: true
-        }),
-        RouterModule.forRoot(appRoutes, {
-            scrollPositionRestoration: 'enabled',
-            relativeLinkResolution: 'legacy'
-        }),
-        NgbModule,
-        ToastrModule.forRoot(),
-        TranslateModule.forRoot(),
-        ContextMenuModule,
-        CoreModule.forRoot(coreConfig),
-        CoreCommonModule,
-        CoreSidebarModule,
-        CoreThemeCustomizerModule,
-        CardSnippetModule,
-        LayoutModule,
-        ContentHeaderModule
-    ],
-    providers: [
-        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-        // ! IMPORTANT: Provider used to create fake backend, comment while using real API
-        fakeBackendProvider
-    ],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    ContextMenuComponent,
+    BasicCustomContextMenuComponent,
+    AnimatedCustomContextMenuComponent,
+    SubMenuCustomContextMenuComponent
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(FakeDbService, {
+      delay: 0,
+      passThruUnknownUrl: true
+    }),
+    RouterModule.forRoot(appRoutes, {
+      scrollPositionRestoration: 'enabled',
+      relativeLinkResolution: 'legacy'
+    }),
+    NgbModule,
+    ToastrModule.forRoot(),
+    TranslateModule.forRoot(),
+    ContextMenuModule,
+    CoreModule.forRoot(coreConfig),
+    CoreCommonModule,
+    CoreSidebarModule,
+    CoreThemeCustomizerModule,
+    CardSnippetModule,
+    LayoutModule,
+    ContentHeaderModule
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    // ! IMPORTANT: Provider used to create fake backend, comment while using real API
+    fakeBackendProvider
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -6,8 +6,8 @@
     <p>
       A Beautiful, Responsive, Customizable, Accessible (Wai-Aria) Replacement For Javascript'S Popup Boxes. Read the
       official
-      <a target="_blank" href="https://github.com/sweetalert2/ngx-sweetalert2">ngx-sweetalert2 Documentation</a> for a
-      full list of instructions and other options.
+      <a target="_blank" href="https://github.com/sweetalert2/ngx-sweetalert2">ngx-sweetalert2 Documentation</a>
+      for a full list of instructions and other options.
     </p>
     <!-- sweet alert basic -->
     <section>
@@ -71,7 +71,10 @@
                 icon="info"
                 [focusCancel]="true"
                 [showCloseButton]="true"
-                [swalOptions]="{ cancelButtonClass: 'btn btn-danger ml-1', confirmButtonClass: 'btn btn-primary' }"
+                [swalOptions]="{
+                  cancelButtonClass: 'btn btn-danger ml-1',
+                  confirmButtonClass: 'btn btn-primary'
+                }"
                 [confirmButtonText]="'<i class=\'feather icon-thumbs-up\' mr-25></i> Great!'"
                 [cancelButtonText]="'<i class=\'feather icon-thumbs-down\'></i>'"
                 [showCancelButton]="true"
@@ -256,7 +259,8 @@
               <p class="card-text">
                 SweetAlert comes with 4 built-in types which will show a corresponding icon animation: "warning",
                 "error", "success" and "info". It can either be put in the object under the key "icon" or passed as the
-                third parameter of <code>[swal] directive.</code>.
+                third parameter of
+                <code>[swal] directive.</code>.
               </p>
               <!-- Sweet Alert success -->
               <button class="btn btn-outline-success mr-1 mb-1" [swal]="SweetAlertSuccess" rippleEffect>Success</button>

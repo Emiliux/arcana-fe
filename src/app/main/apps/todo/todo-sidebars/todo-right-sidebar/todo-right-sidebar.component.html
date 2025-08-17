@@ -32,7 +32,10 @@
           <button class="todo-favorite btn pr-75 p-0" (click)="toggleImportant()">
             <i
               class="fa font-medium-3"
-              [ngClass]="{ 'fa-star text-warning': todo.important === true, 'fa-star-o': todo.important === false }"
+              [ngClass]="{
+                'fa-star text-warning': todo.important === true,
+                'fa-star-o': todo.important === false
+              }"
             ></i>
           </button>
           <button

@@ -37,7 +37,7 @@
         <ng-container *ngIf="bookmarkText !== ''; else defaultBookmarks">
           <li
             class="auto-suggestion"
-            *ngFor="let page of pages | filter: bookmarkText:'title' | slice: 0:6; let i = index"
+            *ngFor="let page of pages | filter : bookmarkText : 'title' | slice : 0 : 6; let i = index"
             [ngClass]="{ current_item: i === activeIndex }"
           >
             <a
@@ -59,7 +59,7 @@
           </li>
         </ng-container>
         <ng-template #defaultBookmarks>
-          <ng-container *ngFor="let page of pages | filter: bookmarkText:'title'; let i = index">
+          <ng-container *ngFor="let page of pages | filter : bookmarkText : 'title'; let i = index">
             <li class="auto-suggestion" *ngIf="page.isBookmarked" [ngClass]="{ current_item: i === activeIndex }">
               <a
                 class="d-flex align-items-center justify-content-between w-100"

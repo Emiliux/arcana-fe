@@ -17,7 +17,9 @@
       (keyup)="searchUpdate($event)"
       [(ngModel)]="searchText"
       #openSearch
-    /><button class="btn search-input-close p-0" (click)="toggleSearch()"><span [data-feather]="'x'"></span></button>
+    /><button class="btn search-input-close p-0" (click)="toggleSearch()">
+      <span [data-feather]="'x'"></span>
+    </button>
 
     <!-- Search List -->
     <ul class="search-list search-list-main" [perfectScrollbar] [class.show]="searchText !== ''" #pageList>
@@ -25,10 +27,10 @@
       <li class="d-flex align-items-center">
         <a href="javascript:void(0)"><h6 class="section-label mt-75 mb-0">Pages</h6></a>
       </li>
-      <ng-container *ngIf="(pages | filter: searchText:'title').length; else noResultsPages">
+      <ng-container *ngIf="(pages | filter : searchText : 'title').length; else noResultsPages">
         <li
           class="auto-suggestion"
-          *ngFor="let page of pages | filter: searchText:'title' | slice: 0:4; let i = index"
+          *ngFor="let page of pages | filter : searchText : 'title' | slice : 0 : 4; let i = index"
           [ngClass]="{ current_item: i === activeIndex }"
           [class.current_item]="page.hover"
           (mouseover)="page.hover = true"
@@ -63,10 +65,10 @@
       <li class="d-flex align-items-center">
         <a href="javascript:void(0)"><h6 class="section-label mt-75 mb-0">Files</h6></a>
       </li>
-      <ng-container *ngIf="(files | filter: searchText:'title').length; else noResultsFiles">
+      <ng-container *ngIf="(files | filter : searchText : 'title').length; else noResultsFiles">
         <li
           class="auto-suggestion"
-          *ngFor="let file of files | filter: searchText:'title' | slice: 0:4"
+          *ngFor="let file of files | filter : searchText : 'title' | slice : 0 : 4"
           [ngClass]="{ current_item: i === activeIndex }"
         >
           <a class="d-flex align-items-center justify-content-between w-100" href="javascript:void(0)"
@@ -98,8 +100,8 @@
       <li class="d-flex align-items-center">
         <a href="javascript:void(0)"><h6 class="section-label mt-75 mb-0">Members</h6></a>
       </li>
-      <ng-container *ngIf="(contacts | filter: searchText:'title').length; else noResultsMembers">
-        <li class="auto-suggestion" *ngFor="let contact of contacts | filter: searchText:'title' | slice: 0:4">
+      <ng-container *ngIf="(contacts | filter : searchText : 'title').length; else noResultsMembers">
+        <li class="auto-suggestion" *ngFor="let contact of contacts | filter : searchText : 'title' | slice : 0 : 4">
           <a class="d-flex align-items-center justify-content-between py-50 w-100" href="javascript:void(0)"
             ><div class="d-flex align-items-center">
               <div class="avatar mr-75"><img [src]="contact.img" alt="png" height="32" /></div>

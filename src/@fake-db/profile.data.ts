@@ -93,7 +93,10 @@ export class ProfileFakeData {
           likedUsers: [
             { avatar: 'assets/images/portrait/small/avatar-s-1.jpg', username: 'Trine Lynes' },
             { avatar: 'assets/images/portrait/small/avatar-s-2.jpg', username: 'Lilian Nenes' },
-            { avatar: 'assets/images/portrait/small/avatar-s-3.jpg', username: 'Alberto Glotzbach' },
+            {
+              avatar: 'assets/images/portrait/small/avatar-s-3.jpg',
+              username: 'Alberto Glotzbach'
+            },
             { avatar: 'assets/images/portrait/small/avatar-s-5.jpg', username: 'George Nordic' },
             { avatar: 'assets/images/portrait/small/avatar-s-4.jpg', username: 'Vinnie Mostowy' }
           ],
@@ -129,7 +132,10 @@ export class ProfileFakeData {
           likedUsers: [
             { avatar: 'assets/images/portrait/small/avatar-s-1.jpg', username: 'Trine Lynes' },
             { avatar: 'assets/images/portrait/small/avatar-s-2.jpg', username: 'Lilian Nenes' },
-            { avatar: 'assets/images/portrait/small/avatar-s-3.jpg', username: 'Alberto Glotzbach' },
+            {
+              avatar: 'assets/images/portrait/small/avatar-s-3.jpg',
+              username: 'Alberto Glotzbach'
+            },
             { avatar: 'assets/images/portrait/small/avatar-s-5.jpg', username: 'George Nordic' },
             { avatar: 'assets/images/portrait/small/avatar-s-4.jpg', username: 'Vinnie Mostowy' }
           ],
@@ -158,7 +164,10 @@ export class ProfileFakeData {
           likedUsers: [
             { avatar: 'assets/images/portrait/small/avatar-s-1.jpg', username: 'Trine Lynes' },
             { avatar: 'assets/images/portrait/small/avatar-s-2.jpg', username: 'Lilian Nenes' },
-            { avatar: 'assets/images/portrait/small/avatar-s-3.jpg', username: 'Alberto Glotzbach' },
+            {
+              avatar: 'assets/images/portrait/small/avatar-s-3.jpg',
+              username: 'Alberto Glotzbach'
+            },
             { avatar: 'assets/images/portrait/small/avatar-s-5.jpg', username: 'George Nordic' },
             { avatar: 'assets/images/portrait/small/avatar-s-4.jpg', username: 'Vinnie Mostowy' }
           ],

@@ -2,9 +2,24 @@ import { BREAKPOINT } from '@angular/flex-layout';
 
 const BS_BREAKPOINTS = [
   { alias: 'bs-xs', overlapping: false, mediaQuery: '(max-width: 575.98px)', suffix: 'BsXs' },
-  { alias: 'bs-sm', overlapping: false, mediaQuery: '(min-width: 576px) and (max-width: 767.98px)', suffix: 'BsSm' },
-  { alias: 'bs-md', overlapping: false, mediaQuery: '(min-width: 768px) and (max-width: 991.98px)', suffix: 'BsMd' },
-  { alias: 'bs-lg', overlapping: false, mediaQuery: '(min-width: 992px) and (max-width: 1199.98px)', suffix: 'BsLg' },
+  {
+    alias: 'bs-sm',
+    overlapping: false,
+    mediaQuery: '(min-width: 576px) and (max-width: 767.98px)',
+    suffix: 'BsSm'
+  },
+  {
+    alias: 'bs-md',
+    overlapping: false,
+    mediaQuery: '(min-width: 768px) and (max-width: 991.98px)',
+    suffix: 'BsMd'
+  },
+  {
+    alias: 'bs-lg',
+    overlapping: false,
+    mediaQuery: '(min-width: 992px) and (max-width: 1199.98px)',
+    suffix: 'BsLg'
+  },
   { alias: 'bs-xl', overlapping: false, mediaQuery: '(min-width: 1200px)', suffix: 'BsXl' },
 
   { alias: 'bs-gt-sm', overlapping: false, mediaQuery: '(min-width: 576px)', suffix: 'BsGtSm' },

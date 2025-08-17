@@ -429,7 +429,9 @@ export class EmailService implements Resolve<any> {
       if (this.labelHandle === '') {
         this.router.navigate(['apps/email/' + this.folderHandle], { queryParams: { q: value } });
       } else {
-        this.router.navigate(['apps/email/label/' + this.labelHandle], { queryParams: { q: value } });
+        this.router.navigate(['apps/email/label/' + this.labelHandle], {
+          queryParams: { q: value }
+        });
       }
       if (value === '' && this.labelHandle === '') {
         this.router.navigate(['apps/email/' + this.folderHandle], {});

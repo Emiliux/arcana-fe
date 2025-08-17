@@ -415,7 +415,7 @@
                       [(ngModel)]="multiCustomGithubUsersSelected"
                     >
                       <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
-                        <div class="ng-value" *ngFor="let item of items | slice: 0:2">
+                        <div class="ng-value" *ngFor="let item of items | slice : 0 : 2">
                           <span class="ng-value-label"
                             ><img [src]="item.avatar_url" width="20px" height="20px" /> {{ item.login }}</span
                           >
@@ -562,8 +562,9 @@
               <div class="row">
                 <div class="col-12">
                   <p class="card-text mb-1">
-                    For different sizes of select, Use classes like <code>.ng-select-size-lg</code> &amp;
-                    <code>.ng-select-size-sm</code> for Large &amp; Small Select respectively.
+                    For different sizes of select, Use classes like
+                    <code>.ng-select-size-lg</code> &amp; <code>.ng-select-size-sm</code> for Large &amp; Small Select
+                    respectively.
                   </p>
                 </div>
                 <div class="col-12">
@@ -651,8 +652,9 @@
               <div class="row">
                 <div class="col-12">
                   <p class="card-text mb-1">
-                    For different sizes of select, Use classes like <code>.ng-select-size-lg</code> &amp;
-                    <code>.ng-select-size-sm</code> for Large &amp; Small Select respectively.
+                    For different sizes of select, Use classes like
+                    <code>.ng-select-size-lg</code> &amp; <code>.ng-select-size-sm</code> for Large &amp; Small Select
+                    respectively.
                   </p>
                 </div>
                 <div class="col-12">

@@ -47,7 +47,7 @@
           color: $theme-dark-body-color;
         }
         &.open:not(.sidebar-group-active) {
-         > a {
+          > a {
             background-color: $theme-dark-body-bg;
           }
         }

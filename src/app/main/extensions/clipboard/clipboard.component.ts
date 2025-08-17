@@ -45,7 +45,10 @@ export class ClipboardComponent implements OnInit {
     selectBox.select();
     document.execCommand('copy');
     document.body.removeChild(selectBox);
-    this.toastr.success('', 'Copied sucessfully', { toastClass: 'toast ngx-toastr', closeButton: true });
+    this.toastr.success('', 'Copied sucessfully', {
+      toastClass: 'toast ngx-toastr',
+      closeButton: true
+    });
   }
 
   // Lifecycle Hooks

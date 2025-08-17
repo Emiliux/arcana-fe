@@ -32,7 +32,7 @@
                 >
                   <span class="navbar-toggler-icon d-block d-lg-none"><i data-feather="menu"></i></span>
                 </button>
-                <div class="search-results">{{ (products | filter: searchText:'name').length }} results found</div>
+                <div class="search-results">{{ (products | filter : searchText : 'name').length }} results found</div>
               </div>
               <div class="view-options d-flex">
                 <div class="btn-group dropdown-sort" ngbDropdown>
@@ -104,8 +104,8 @@
           [product]="product"
           *ngFor="
             let product of products
-              | filter: searchText:'name'
-              | slice: (page - 1) * pageSize:(page - 1) * pageSize + pageSize
+              | filter : searchText : 'name'
+              | slice : (page - 1) * pageSize : (page - 1) * pageSize + pageSize
           "
         ></app-ecommerce-item>
       </section>
@@ -117,7 +117,7 @@
           <div class="col-sm-12">
             <div class="d-flex justify-content-center">
               <ngb-pagination
-                [collectionSize]="(products | filter: searchText:'name').length"
+                [collectionSize]="(products | filter : searchText : 'name').length"
                 [(page)]="page"
                 [maxSize]="5"
                 [rotate]="true"

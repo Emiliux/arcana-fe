@@ -5,7 +5,14 @@ export const fadeInLeft = trigger('fadeInLeft', [
   transition('* => *', [
     query(
       ':enter, :leave',
-      style({ position: 'absolute', left: 0, width: '100%', paddingRight: '2rem', paddingLeft: '2rem', opacity: 0 }),
+      style({
+        position: 'absolute',
+        left: 0,
+        width: '100%',
+        paddingRight: '2rem',
+        paddingLeft: '2rem',
+        opacity: 0
+      }),
       {
         optional: true
       }
@@ -51,7 +58,12 @@ export const zoomIn = trigger('zoomIn', [
       [
         animate(
           '400ms ease',
-          style({ opacity: 1, paddingRight: '2rem', paddingLeft: '2rem', transform: 'scale(1) translateY(0)' })
+          style({
+            opacity: 1,
+            paddingRight: '2rem',
+            paddingLeft: '2rem',
+            transform: 'scale(1) translateY(0)'
+          })
         )
       ],
       {

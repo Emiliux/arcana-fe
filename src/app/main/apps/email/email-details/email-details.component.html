@@ -94,7 +94,9 @@
             </div>
           </li>
           <li class="list-inline-item mr-75">
-            <button (click)="unRead()" class="btn action-icon p-0"><i data-feather="mail" [size]="18"></i></button>
+            <button (click)="unRead()" class="btn action-icon p-0">
+              <i data-feather="mail" [size]="18"></i>
+            </button>
           </li>
           <li class="list-inline-item mr-75">
             <button (click)="updateFolderOnSelectedMails('trash')" class="btn action-icon p-0">
@@ -175,7 +177,7 @@
                             </tr>
                             <tr>
                               <td class="text-right">Date:</td>
-                              <td>{{ replie.time | date: 'short':'UTC' }}</td>
+                              <td>{{ replie.time | date : 'short' : 'UTC' }}</td>
                             </tr>
                           </tbody>
                         </table>
@@ -184,7 +186,7 @@
                   </div>
                 </div>
                 <div class="mail-meta-item d-flex align-items-center">
-                  <small class="mail-date-time text-muted">{{ replie.time | date: 'short':'UTC' }}</small>
+                  <small class="mail-date-time text-muted">{{ replie.time | date : 'short' : 'UTC' }}</small>
                   <div ngbDropdown class="ml-50">
                     <div
                       role="button"
@@ -265,7 +267,7 @@
                           </tr>
                           <tr>
                             <td class="text-right">Date:</td>
-                            <td>{{ openedEmail.time | date: 'short':'UTC' }}</td>
+                            <td>{{ openedEmail.time | date : 'short' : 'UTC' }}</td>
                           </tr>
                         </tbody>
                       </table>
@@ -274,7 +276,7 @@
                 </div>
               </div>
               <div class="mail-meta-item d-flex align-items-center">
-                <small class="mail-date-time text-muted">{{ openedEmail.time | date: 'short':'UTC' }}</small>
+                <small class="mail-date-time text-muted">{{ openedEmail.time | date : 'short' : 'UTC' }}</small>
                 <div ngbDropdown class="ml-50">
                   <div
                     role="button"

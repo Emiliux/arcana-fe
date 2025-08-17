@@ -33,7 +33,7 @@
                 <span>{{ data.questionData.title }}</span>
               </h4>
               <p class="mb-2">Last updated on {{ data.questionData.lastUpdated }}</p>
-              <div [innerHTML]="data.questionData.content | safe: 'SafeHtml'"></div>
+              <div [innerHTML]="data.questionData.content | safe : 'SafeHtml'"></div>
             </div>
           </div>
         </div>

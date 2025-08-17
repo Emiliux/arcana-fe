@@ -104,7 +104,9 @@
                   <h6 class="mb-2">Invoice To:</h6>
                   <h6 class="mb-25">{{ apiData.client.name }}</h6>
                   <p class="card-text mb-25">{{ apiData.client.company }}</p>
-                  <p class="card-text mb-25">{{ apiData.client.address + ' ' + apiData.client.country }}</p>
+                  <p class="card-text mb-25">
+                    {{ apiData.client.address + ' ' + apiData.client.country }}
+                  </p>
                   <p class="card-text mb-25">{{ apiData.client.contact }}</p>
                   <p class="card-text mb-0">{{ apiData.client.companyEmail }}</p>
                 </div>
@@ -195,7 +197,8 @@
               <div class="row invoice-sales-total-wrapper">
                 <div class="col-md-6 order-md-1 order-2 mt-md-0 mt-3">
                   <p class="card-text mb-0">
-                    <span class="font-weight-bold">Salesperson:</span> <span class="ml-75">Alfie Solomons</span>
+                    <span class="font-weight-bold">Salesperson:</span>
+                    <span class="ml-75">Alfie Solomons</span>
                   </p>
                 </div>
                 <div class="col-md-6 d-flex justify-content-end order-md-2 order-1">
