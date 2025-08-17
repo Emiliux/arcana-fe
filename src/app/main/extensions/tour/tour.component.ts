@@ -46,75 +46,75 @@ export class TourComponent implements OnInit {
     };
     this.shepherdService.modal = true;
 
-    this.shepherdService.addSteps([
-      {
-        title: 'Navbar',
-        text: 'This is your navbar',
-        attachTo: {
-          element: '.navbar',
-          on: 'bottom'
-        },
-        buttons: [
-          {
-            text: 'Skip',
-            type: 'cancel',
-            classes: this.backBtnClass
-          },
-          {
-            text: 'Next',
-            type: 'next',
-            classes: this.nextBtnClass
-          }
-        ],
-        useModalOverlay: true
-      },
-      {
-        title: 'Card',
-        text: 'This is a card.',
-        attachTo: {
-          element: '.card',
-          on: 'top'
-        },
-        buttons: [
-          {
-            text: 'Skip',
-            type: 'cancel',
-            classes: this.backBtnClass
-          },
+    // this.shepherdService.addSteps([
+    //   {
+    //     title: 'Navbar',
+    //     text: 'This is your navbar',
+    //     attachTo: {
+    //       element: '.navbar',
+    //       on: 'bottom'
+    //     },
+    //     buttons: [
+    //       {
+    //         text: 'Skip',
+    //         label: 'cancel',
+    //         classes: this.backBtnClass
+    //       },
+    //       {
+    //         text: 'Next',
+    //         label: 'next',
+    //         classes: this.nextBtnClass
+    //       }
+    //     ],
+    //     useModalOverlay: true
+    //   },
+    //   {
+    //     title: 'Card',
+    //     text: 'This is a card.',
+    //     attachTo: {
+    //       element: '.card',
+    //       on: 'top'
+    //     },
+    //     buttons: [
+    //       {
+    //         text: 'Skip',
+    //         label: 'cancel',
+    //         classes: this.backBtnClass
+    //       },
 
-          {
-            text: 'Back',
-            type: 'back',
-            classes: this.backBtnClass
-          },
-          {
-            text: 'Next',
-            type: 'next',
-            classes: this.nextBtnClass
-          }
-        ]
-      },
-      {
-        title: 'Footer',
-        text: 'This is the footer.',
-        attachTo: {
-          element: '.footer',
-          on: 'top'
-        },
-        buttons: [
-          {
-            text: 'Back',
-            type: 'back',
-            classes: this.backBtnClass
-          },
-          {
-            text: 'Finish',
-            type: 'next',
-            classes: this.nextBtnClass
-          }
-        ]
-      }
-    ]);
+    //       {
+    //         text: 'Back',
+    //         label: 'back',
+    //         classes: this.backBtnClass
+    //       },
+    //       {
+    //         text: 'Next',
+    //         label: 'next',
+    //         classes: this.nextBtnClass
+    //       }
+    //     ]
+    //   },
+    //   {
+    //     title: 'Footer',
+    //     text: 'This is the footer.',
+    //     attachTo: {
+    //       element: '.footer',
+    //       on: 'top'
+    //     },
+    //     buttons: [
+    //       {
+    //         text: 'Back',
+    //         label: 'back',
+    //         classes: this.backBtnClass
+    //       },
+    //       {
+    //         text: 'Finish',
+    //         label: 'next',
+    //         classes: this.nextBtnClass
+    //       }
+    //     ]
+    //   }
+    // ]);
   }
 
   /**
