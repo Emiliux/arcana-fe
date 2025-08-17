@@ -72,7 +72,7 @@ export const snippetCodeWithIcons: snippetCode = {
 export const snippetCodeLink: snippetCode = {
   html: `
 <div class="badge badge-primary">
-  <a href="https://pixinvent.com/" target="_blank">
+  <a href="https://sianca.com.ar/" target="_blank">
     <span [data-feather]="'link'" [class]="'mr-25'"></span>
     <span>Link Badge</span>
   </a>

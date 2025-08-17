@@ -78,7 +78,7 @@ export class EmailFakeData {
           email: 'johndoe@mail.com'
         },
         {
-          name: 'Pixinvent',
+          name: 'Sianca',
           email: 'hello@pixinvent.net'
         }
       ],

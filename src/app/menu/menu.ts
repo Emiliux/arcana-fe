@@ -242,7 +242,7 @@ export const menu: CoreMenu[] = [
                 title: 'Welcome',
                 translate: 'MENU.PAGES.MAIL.WELCOME',
                 type: 'item',
-                url: 'https://pixinvent.com/demo/arcana-mail-template/mail-welcome.html',
+                url: 'https://sianca.com.ar/demo/arcana-mail-template/mail-welcome.html',
                 externalUrl: true,
                 openInNewTab: true
               },
@@ -251,7 +251,7 @@ export const menu: CoreMenu[] = [
                 title: 'Reset Password',
                 translate: 'MENU.PAGES.MAIL.RESET',
                 type: 'item',
-                url: 'https://pixinvent.com/demo/arcana-mail-template/mail-reset-password.html',
+                url: 'https://sianca.com.ar/demo/arcana-mail-template/mail-reset-password.html',
                 externalUrl: true,
                 openInNewTab: true
               },
@@ -260,7 +260,7 @@ export const menu: CoreMenu[] = [
                 title: 'Verify',
                 translate: 'MENU.PAGES.MAIL.VERIFY',
                 type: 'item',
-                url: 'https://pixinvent.com/demo/arcana-mail-template/mail-verify-email.html',
+                url: 'https://sianca.com.ar/demo/arcana-mail-template/mail-verify-email.html',
                 externalUrl: true,
                 openInNewTab: true
               },
@@ -269,7 +269,7 @@ export const menu: CoreMenu[] = [
                 title: 'Deactivate',
                 translate: 'MENU.PAGES.MAIL.DEACTIVATE',
                 type: 'item',
-                url: 'https://pixinvent.com/demo/arcana-mail-template/mail-deactivate-account.html',
+                url: 'https://sianca.com.ar/demo/arcana-mail-template/mail-deactivate-account.html',
                 externalUrl: true,
                 openInNewTab: true
               },
@@ -278,7 +278,7 @@ export const menu: CoreMenu[] = [
                 title: 'Invoice',
                 translate: 'MENU.PAGES.MAIL.INVOICE',
                 type: 'item',
-                url: 'https://pixinvent.com/demo/arcana-mail-template/mail-invoice.html',
+                url: 'https://sianca.com.ar/demo/arcana-mail-template/mail-invoice.html',
                 externalUrl: true,
                 openInNewTab: true
               },
@@ -287,7 +287,7 @@ export const menu: CoreMenu[] = [
                 title: 'Promotional',
                 translate: 'MENU.PAGES.MAIL.PROMOTIONAL',
                 type: 'item',
-                url: 'https://pixinvent.com/demo/arcana-mail-template/mail-promotional.html',
+                url: 'https://sianca.com.ar/demo/arcana-mail-template/mail-promotional.html',
                 externalUrl: true,
                 openInNewTab: true
               }
@@ -1180,7 +1180,7 @@ export const menu: CoreMenu[] = [
         translate: 'MENU.OTHERS.DOCUMENTATION',
         icon: 'file-text',
         type: 'item',
-        url: 'https://pixinvent.com/demo/arcana-angular-admin-dashboard-template/documentation',
+        url: 'https://sianca.com.ar/demo/arcana-angular-admin-dashboard-template/documentation',
         externalUrl: true,
         openInNewTab: true
       },
