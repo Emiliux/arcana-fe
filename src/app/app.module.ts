@@ -18,7 +18,6 @@ import { CoreSidebarModule, CoreThemeCustomizerModule } from '@core/components';
 import { CardSnippetModule } from '@core/components/card-snippet/card-snippet.module';
 
 import { coreConfig } from 'app/app-config';
-import { AuthGuard } from 'app/auth/helpers/auth.guards';
 import { fakeBackendProvider } from 'app/auth/helpers'; // used to create fake backend
 import { JwtInterceptor, ErrorInterceptor } from 'app/auth/helpers';
 import { AppComponent } from 'app/app.component';
@@ -30,8 +29,6 @@ import { ContextMenuComponent } from 'app/main/extensions/context-menu/context-m
 import { AnimatedCustomContextMenuComponent } from './main/extensions/context-menu/custom-context-menu/animated-custom-context-menu/animated-custom-context-menu.component';
 import { BasicCustomContextMenuComponent } from './main/extensions/context-menu/custom-context-menu/basic-custom-context-menu/basic-custom-context-menu.component';
 import { SubMenuCustomContextMenuComponent } from './main/extensions/context-menu/custom-context-menu/sub-menu-custom-context-menu/sub-menu-custom-context-menu.component';
-
-
 
 @NgModule({
   declarations: [

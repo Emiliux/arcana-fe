@@ -3,11 +3,18 @@ import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import { first } from 'rxjs/operators';
 
 import { CoreConfigService } from '@core/services/config.service';
+import { CoreTranslationService } from '@core/services/translation.service';
 
 import { colors } from 'app/colors.const';
 import { User } from 'app/auth/models';
 import { UserService } from 'app/auth/service';
 import { DashboardService } from 'app/main/dashboard/dashboard.service';
+
+import { locale as english } from 'app/main/dashboard/i18n/en';
+import { locale as french } from 'app/main/dashboard/i18n/fr';
+import { locale as german } from 'app/main/dashboard/i18n/de';
+import { locale as portuguese } from 'app/main/dashboard/i18n/pt';
+import { locale as spanish } from 'app/main/dashboard/i18n/es';
 
 @Component({
   selector: 'app-analytics',
@@ -56,7 +63,8 @@ export class AnalyticsComponent implements OnInit {
   constructor(
     private _userService: UserService,
     private _dashboardService: DashboardService,
-    private _coreConfigService: CoreConfigService
+    private _coreConfigService: CoreConfigService,
+    private _coreTranslationService: CoreTranslationService
   ) {
     // Subscribers Gained chart
     this.gainedChartoptions = {
@@ -292,6 +300,9 @@ export class AnalyticsComponent implements OnInit {
    * On init
    */
   ngOnInit(): void {
+    // Load translations
+    this._coreTranslationService.translate(english, french, german, portuguese, spanish);
+
     // get the currentUser details from localStorage
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
 

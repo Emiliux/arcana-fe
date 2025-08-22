@@ -19,7 +19,7 @@ export const coreConfig: CoreConfig = {
     appName     : 'Arcana',                                       // App Name
     appTitle    : 'Sistema de gestion',                           // App Title
     appLogoImage: 'assets/images/logo/logo.svg',                  // App Logo
-    appLanguage : 'en',                                           // App Default Language (en, fr, de, pt etc..)
+    appLanguage : 'es'                                            // App Default Language (en, fr, de, pt etc..)
   },
   layout: {
     skin  : 'default',                        // default, dark, bordered, semi-dark

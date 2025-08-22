@@ -12,6 +12,7 @@ import { locale as english } from 'app/main/dashboard/i18n/en';
 import { locale as french } from 'app/main/dashboard/i18n/fr';
 import { locale as german } from 'app/main/dashboard/i18n/de';
 import { locale as portuguese } from 'app/main/dashboard/i18n/pt';
+import { locale as spanish } from 'app/main/dashboard/i18n/es';
 
 @Component({
   selector: 'app-ecommerce',
@@ -79,7 +80,6 @@ export class EcommerceComponent implements OnInit {
     this.isAdmin = this._authenticationService.isAdmin;
     this.isClient = this._authenticationService.isClient;
 
-    this._coreTranslationService.translate(english, french, german, portuguese);
     // Statistics Bar Chart
     this.statisticsBar = {
       chart: {
@@ -678,6 +678,9 @@ export class EcommerceComponent implements OnInit {
    * On init
    */
   ngOnInit(): void {
+    // Load translations
+    this._coreTranslationService.translate(english, french, german, portuguese, spanish);
+
     // get the currentUser details from localStorage
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
