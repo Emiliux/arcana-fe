@@ -3,10 +3,52 @@ export const locale = {
   data: {
     MENU: {
       DASHBOARD: {
+        HOME: 'Dashboard',
         COLLAPSIBLE: 'Dashboards',
         BADGE: '2',
         ANALYTICS: 'Analytics',
         ECOMMERCE: 'eCommerce'
+      },
+      INVENTORY: {
+        COLLAPSIBLE: 'Inventory',
+        PRODUCTS: 'Products',
+        SHORTAGE_PRODUCTS: 'Shortage Products'
+      },
+      PURCHASE: {
+        COLLAPSIBLE: 'Purchase',
+        INVOICES: 'Invoices',
+        SUPPLIERS: 'Suppliers',
+        RETURN: 'Purchase Return',
+        ORDERS: 'Purchase Orders'
+      },
+      SALE: {
+        COLLAPSIBLE: 'Sale',
+        INVOICE: 'Sale Invoice',
+        CUSTOMERS: 'Customers',
+        RETURN: 'Sale Return'
+      },
+      ACCOUNTS: {
+        COLLAPSIBLE: 'Accounts',
+        ACCOUNT: 'Account',
+        TRANSACTION: 'Transaction',
+        TRIAL_BALANCE: 'Trial Balance',
+        BALANCE_SHEET: 'Balance Sheet',
+        INCOME_STATEMENT: 'Income Statement'
+      },
+      REPORT: {
+        COLLAPSIBLE: 'Report',
+        INVENTORY_REPORT: 'Inventory Report',
+        PURCHASE_REPORT: 'Purchase Report',
+        SALE_REPORT: 'Sale Report',
+        SUPPLIER_REPORT: 'Supplier Report',
+        CUSTOMER_REPORT: 'Customer Report',
+        PAYMENT_REPORT: 'Payment Report'
+      },
+      POS: {
+        HOME: 'POS'
+      },
+      SUPPORT: {
+        SECTION: 'Support'
       },
       APPS: {
         SECTION: 'Apps & Pages',

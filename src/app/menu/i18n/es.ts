@@ -3,10 +3,52 @@ export const locale = {
   data: {
     MENU: {
       DASHBOARD: {
+        HOME: 'Panel de Control',
         COLLAPSIBLE: 'Paneles',
         BADGE: '2',
         ANALYTICS: 'Analíticas',
         ECOMMERCE: 'eCommerce'
+      },
+      INVENTORY: {
+        COLLAPSIBLE: 'Inventario',
+        PRODUCTS: 'Productos',
+        SHORTAGE_PRODUCTS: 'Productos con Escasez'
+      },
+      PURCHASE: {
+        COLLAPSIBLE: 'Compras',
+        INVOICES: 'Facturas',
+        SUPPLIERS: 'Proveedores',
+        RETURN: 'Devolución de Compras',
+        ORDERS: 'Órdenes de Compra'
+      },
+      SALE: {
+        COLLAPSIBLE: 'Ventas',
+        INVOICE: 'Factura de Venta',
+        CUSTOMERS: 'Clientes',
+        RETURN: 'Devolución de Ventas'
+      },
+      ACCOUNTS: {
+        COLLAPSIBLE: 'Cuentas',
+        ACCOUNT: 'Cuenta',
+        TRANSACTION: 'Transacción',
+        TRIAL_BALANCE: 'Balance de Comprobación',
+        BALANCE_SHEET: 'Balance General',
+        INCOME_STATEMENT: 'Estado de Resultados'
+      },
+      REPORT: {
+        COLLAPSIBLE: 'Reportes',
+        INVENTORY_REPORT: 'Reporte de Inventario',
+        PURCHASE_REPORT: 'Reporte de Compras',
+        SALE_REPORT: 'Reporte de Ventas',
+        SUPPLIER_REPORT: 'Reporte de Proveedores',
+        CUSTOMER_REPORT: 'Reporte de Clientes',
+        PAYMENT_REPORT: 'Reporte de Pagos'
+      },
+      POS: {
+        HOME: 'Punto de Venta'
+      },
+      SUPPORT: {
+        SECTION: 'Soporte'
       },
       APPS: {
         SECTION: 'Aplicaciones y Páginas',
