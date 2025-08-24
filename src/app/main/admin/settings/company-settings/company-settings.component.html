@@ -1,0 +1,215 @@
+<div class="company-settings-container">
+  <div class="settings-header">
+    <h1 class="page-title">Company Setting</h1>
+  </div>
+
+  <div class="settings-form-container">
+    <form [formGroup]="companyForm" (ngSubmit)="onSubmit()" class="company-form">
+      <!-- Company Name -->
+      <div class="form-group">
+        <label for="companyName" class="form-label"> <span class="required-asterisk">*</span> Company Name: </label>
+        <input
+          type="text"
+          id="companyName"
+          class="form-control"
+          [class.is-invalid]="submitted && f['companyName'].errors"
+          formControlName="companyName"
+          placeholder="Enter company name"
+        />
+        <div *ngIf="submitted && f['companyName'].errors" class="invalid-feedback">
+          <div *ngIf="f['companyName'].errors['required']">Company name is required.</div>
+          <div *ngIf="f['companyName'].errors['minlength']">Company name must be at least 2 characters.</div>
+          <div *ngIf="f['companyName'].errors['maxlength']">Company name cannot exceed 100 characters.</div>
+        </div>
+      </div>
+
+      <!-- Tagline -->
+      <div class="form-group">
+        <label for="tagline" class="form-label"> <span class="required-asterisk">*</span> Tagline: </label>
+        <input
+          type="text"
+          id="tagline"
+          class="form-control"
+          [class.is-invalid]="submitted && f['tagline'].errors"
+          formControlName="tagline"
+          placeholder="Enter company tagline"
+        />
+        <div *ngIf="submitted && f['tagline'].errors" class="invalid-feedback">
+          <div *ngIf="f['tagline'].errors['required']">Tagline is required.</div>
+          <div *ngIf="f['tagline'].errors['maxlength']">Tagline cannot exceed 200 characters.</div>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="form-group">
+        <label for="address" class="form-label"> <span class="required-asterisk">*</span> Address: </label>
+        <textarea
+          id="address"
+          class="form-control"
+          [class.is-invalid]="submitted && f['address'].errors"
+          formControlName="address"
+          rows="3"
+          placeholder="Enter company address"
+        ></textarea>
+        <div *ngIf="submitted && f['address'].errors" class="invalid-feedback">
+          <div *ngIf="f['address'].errors['required']">Address is required.</div>
+          <div *ngIf="f['address'].errors['maxlength']">Address cannot exceed 500 characters.</div>
+        </div>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="form-group">
+        <label for="phoneNumber" class="form-label"> <span class="required-asterisk">*</span> Phone Number: </label>
+        <input
+          type="tel"
+          id="phoneNumber"
+          class="form-control"
+          [class.is-invalid]="submitted && f['phoneNumber'].errors"
+          formControlName="phoneNumber"
+          placeholder="Enter phone number"
+        />
+        <div *ngIf="submitted && f['phoneNumber'].errors" class="invalid-feedback">
+          <div *ngIf="f['phoneNumber'].errors['required']">Phone number is required.</div>
+          <div *ngIf="f['phoneNumber'].errors['pattern']">Please enter a valid phone number.</div>
+        </div>
+      </div>
+
+      <!-- Email Address -->
+      <div class="form-group">
+        <label for="emailAddress" class="form-label"> <span class="required-asterisk">*</span> Email Address: </label>
+        <input
+          type="email"
+          id="emailAddress"
+          class="form-control"
+          [class.is-invalid]="submitted && f['emailAddress'].errors"
+          formControlName="emailAddress"
+          placeholder="Enter email address"
+        />
+        <div *ngIf="submitted && f['emailAddress'].errors" class="invalid-feedback">
+          <div *ngIf="f['emailAddress'].errors['required']">Email address is required.</div>
+          <div *ngIf="f['emailAddress'].errors['email']">Please enter a valid email address.</div>
+        </div>
+      </div>
+
+      <!-- Website -->
+      <div class="form-group">
+        <label for="website" class="form-label"> <span class="required-asterisk">*</span> Website: </label>
+        <input
+          type="url"
+          id="website"
+          class="form-control"
+          [class.is-invalid]="submitted && f['website'].errors"
+          formControlName="website"
+          placeholder="Enter website URL"
+        />
+        <div *ngIf="submitted && f['website'].errors" class="invalid-feedback">
+          <div *ngIf="f['website'].errors['required']">Website is required.</div>
+          <div *ngIf="f['website'].errors['pattern']">Please enter a valid website URL.</div>
+        </div>
+      </div>
+
+      <!-- Upload Logo -->
+      <div class="form-group">
+        <label class="form-label">Upload Logo:</label>
+        <div class="logo-upload-container">
+          <div class="custom-file">
+            <input
+              type="file"
+              class="custom-file-input"
+              id="logoInput"
+              accept="image/png"
+              (change)="onLogoSelected($event)"
+            />
+            <label class="custom-file-label" for="logoInput">
+              {{ selectedLogo ? selectedLogo.name : 'Choose file' }}
+            </label>
+          </div>
+          <div class="logo-requirements">
+            <span class="required-text">Required image size 1024 x 1024 px & transparent png format</span>
+          </div>
+          <div *ngIf="logoPreview" class="logo-preview-container">
+            <img [src]="logoPreview" alt="Logo Preview" class="logo-preview" />
+            <button type="button" class="btn btn-outline-danger btn-sm remove-logo-btn" (click)="removeLogo()">
+              <i class="feather icon-trash-2"></i> Remove
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="form-group">
+        <label for="footer" class="form-label"> <span class="required-asterisk">*</span> Footer: </label>
+        <div class="rich-text-editor">
+          <div class="editor-toolbar">
+            <button type="button" class="toolbar-btn" title="Heading 1">H1</button>
+            <button type="button" class="toolbar-btn" title="Heading 2">H2</button>
+            <select class="toolbar-select">
+              <option>Sans Serif</option>
+              <option>Serif</option>
+              <option>Monospace</option>
+            </select>
+            <button type="button" class="toolbar-btn" title="Numbered List">
+              <i class="feather icon-list"></i>
+            </button>
+            <button type="button" class="toolbar-btn" title="Bulleted List">
+              <i class="feather icon-list"></i>
+            </button>
+            <button type="button" class="toolbar-btn" title="Bold">
+              <i class="feather icon-bold"></i>
+            </button>
+            <button type="button" class="toolbar-btn" title="Italic">
+              <i class="feather icon-italic"></i>
+            </button>
+            <button type="button" class="toolbar-btn" title="Underline">
+              <i class="feather icon-underline"></i>
+            </button>
+            <button type="button" class="toolbar-btn" title="Link">
+              <i class="feather icon-link"></i>
+            </button>
+            <button type="button" class="toolbar-btn" title="Image">
+              <i class="feather icon-image"></i>
+            </button>
+            <button type="button" class="toolbar-btn" title="Text Color">
+              <i class="feather icon-type"></i>
+            </button>
+            <button type="button" class="toolbar-btn" title="Background Color">
+              <i class="feather icon-droplet"></i>
+            </button>
+            <button type="button" class="toolbar-btn" title="Clear Formatting">
+              <i class="feather icon-x"></i>
+            </button>
+          </div>
+          <textarea
+            id="footer"
+            class="form-control editor-content"
+            [class.is-invalid]="submitted && f['footer'].errors"
+            formControlName="footer"
+            rows="6"
+            placeholder="Enter footer content"
+          ></textarea>
+          <div *ngIf="submitted && f['footer'].errors" class="invalid-feedback">
+            <div *ngIf="f['footer'].errors['required']">Footer content is required.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Actions -->
+      <div class="form-actions">
+        <button type="button" class="btn btn-outline-secondary me-2" (click)="onCancel()" [disabled]="loading">
+          <i class="feather icon-x me-1"></i>
+          Cancel
+        </button>
+        <button type="submit" class="btn btn-primary" [disabled]="loading || companyForm.invalid">
+          <span *ngIf="!loading">
+            <i class="feather icon-check me-1"></i>
+            Update Details
+          </span>
+          <span *ngIf="loading">
+            <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+            Updating...
+          </span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

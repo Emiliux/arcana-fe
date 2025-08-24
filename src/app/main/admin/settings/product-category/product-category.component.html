@@ -1,0 +1,135 @@
+<div class="product-category-container">
+  <!-- Header Section -->
+  <div class="header-section">
+    <div class="title-section">
+      <h1 class="page-title">Product Category</h1>
+    </div>
+    <div class="action-section">
+      <button class="btn btn-primary create-btn" (click)="openCreateCategory()">
+        <i class="feather icon-plus"></i>
+        Create Category
+      </button>
+    </div>
+  </div>
+
+  <!-- Control and Filter Section -->
+  <div class="control-section">
+    <div class="left-controls">
+      <div class="search-container">
+        <input
+          type="text"
+          class="form-control search-input"
+          placeholder="Search"
+          [formControl]="searchForm.get('search')"
+        />
+        <button class="btn btn-primary search-btn">
+          <i class="feather icon-search"></i>
+        </button>
+      </div>
+      <button class="btn btn-outline-secondary filter-btn">Filter +</button>
+    </div>
+    <div class="right-controls">
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+          Columns
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">ID</a></li>
+          <li><a class="dropdown-item" href="#">Name</a></li>
+          <li><a class="dropdown-item" href="#">Created At</a></li>
+        </ul>
+      </div>
+      <button class="btn btn-outline-secondary more-btn">
+        <i class="feather icon-more-vertical"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Data Table -->
+  <div class="table-container">
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th class="text-start">ID</th>
+            <th class="text-start">Name</th>
+            <th class="text-start">Created At</th>
+            <th class="text-end">...</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let category of paginatedCategories" class="table-row">
+            <td class="text-start">{{ category.id }}</td>
+            <td class="text-start">{{ category.name }}</td>
+            <td class="text-start">{{ category.createdAt }}</td>
+            <td class="text-end">
+              <div class="dropdown">
+                <button class="btn btn-link btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                  <i class="feather icon-more-horizontal"></i>
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"><i class="feather icon-edit"></i> Edit</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"><i class="feather icon-trash-2"></i> Delete</a>
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Loading State -->
+    <div *ngIf="loading" class="loading-container">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div *ngIf="!loading && paginatedCategories.length === 0" class="empty-state">
+      <i class="feather icon-inbox empty-icon"></i>
+      <p class="empty-text">No categories found</p>
+    </div>
+  </div>
+
+  <!-- Pagination Footer -->
+  <div class="pagination-container">
+    <div class="pagination-info">
+      <span
+        >Showing {{ (currentPage - 1) * itemsPerPage + 1 }} to {{ Math.min(currentPage * itemsPerPage, totalItems) }} of
+        {{ totalItems }} entries</span
+      >
+    </div>
+    <div class="pagination-controls">
+      <nav aria-label="Page navigation">
+        <ul class="pagination">
+          <li class="page-item" [class.disabled]="currentPage === 1">
+            <a class="page-link" href="#" (click)="onPageChange(currentPage - 1); $event.preventDefault()">
+              <i class="feather icon-chevron-left"></i>
+            </a>
+          </li>
+          <li *ngFor="let page of pageNumbers" class="page-item" [class.active]="page === currentPage">
+            <a class="page-link" href="#" (click)="onPageChange(page); $event.preventDefault()">{{ page }}</a>
+          </li>
+          <li class="page-item" [class.disabled]="currentPage === totalPages">
+            <a class="page-link" href="#" (click)="onPageChange(currentPage + 1); $event.preventDefault()">
+              <i class="feather icon-chevron-right"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="items-per-page">
+      <select class="form-select" (change)="onItemsPerPageChange($event.target.value)">
+        <option value="10">10/Page</option>
+        <option value="25">25/Page</option>
+        <option value="50">50/Page</option>
+        <option value="100">100/Page</option>
+      </select>
+    </div>
+  </div>
+</div>

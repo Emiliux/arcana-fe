@@ -12,9 +12,9 @@ export const locale = {
       INVENTORY: {
         COLLAPSIBLE: 'Inventario',
         PRODUCTS: 'Productos',
-        SHORTAGE_PRODUCTS: 'Productos con Escasez',
-        CATEGORIES: 'Categorías de Productos',
-        SUBCATEGORIES: 'Subcategorías de Productos',
+        SHORTAGE_PRODUCTS: 'Prod. con Escasez',
+        CATEGORIES: 'Categorías (Prod.)',
+        SUBCATEGORIES: 'Subcategorías (Prod.)',
         BRANDS: 'Marcas de Productos',
         UNITS: 'Unidades de Productos',
         COLORS: 'Colores de Productos',
@@ -26,7 +26,7 @@ export const locale = {
         COLLAPSIBLE: 'Compras',
         INVOICES: 'Facturas',
         SUPPLIERS: 'Proveedores',
-        RETURN: 'Devolución de Compras',
+        RETURN: 'Devoluciones',
         ORDERS: 'Órdenes de Compra',
         SUPPLIERS_SETTINGS: 'Configuración de Proveedores'
       },
@@ -34,7 +34,7 @@ export const locale = {
         COLLAPSIBLE: 'Ventas',
         INVOICE: 'Factura de Venta',
         CUSTOMERS: 'Clientes',
-        RETURN: 'Devolución de Ventas'
+        RETURN: 'Devoluciones'
       },
       ACCOUNTS: {
         COLLAPSIBLE: 'Cuentas',
@@ -58,7 +58,7 @@ export const locale = {
       },
       SETTINGS: {
         SECTION: 'Configuraciones',
-        COMPANY_SETTINGS: 'Configuración de Empresa',
+        COMPANY_SETTINGS: 'Empresa',
         APP_SETTINGS: 'Configuración de Aplicación',
         USERS_SETTINGS_COLLAPSIBLE: 'Configuración de Usuarios',
         USERS: 'Usuarios',

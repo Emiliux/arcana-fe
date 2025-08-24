@@ -250,7 +250,7 @@ export const menu: CoreMenu[] = [
         type: 'item',
         // role: ['Admin'], //? To set multiple role: ['Admin', 'Client']
         icon: 'layout',
-        url: 'settings/company-settings'
+        url: 'admin/settings/company-settings'
       },
       {
         id: 'appSettings',
@@ -318,7 +318,7 @@ export const menu: CoreMenu[] = [
             type: 'item',
             // role: ['Admin'],
             icon: 'circle',
-            url: 'inventory/categories'
+            url: 'admin/settings/product-category'
           },
           {
             id: 'subcategories',

@@ -47,6 +47,11 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'admin',
+    loadChildren: () => import('./main/admin/admin.module').then(m => m.AdminModule),
+    canActivate: [AuthGuard]
+  },
+  {
     path: '',
     redirectTo: '/dashboard/ecommerce',
     pathMatch: 'full'
@@ -61,4 +66,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
