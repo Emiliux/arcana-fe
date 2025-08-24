@@ -1,48 +1,27 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "projects/**/*"
-  ],
+  "ignorePatterns": ["projects/**/*"],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.ts"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "ecmaVersion": 2020,
         "sourceType": "module",
-        "project": "./tsconfig.json",
-        "ecmaFeatures": {
-          "globalReturn": false,
-          "impliedStrict": false,
-          "jsx": false,
-          "experimentalObjectRestSpread": false
-        }
+        "project": "./tsconfig.json"
       },
-      "extends": [
-        "eslint:recommended",
-        "prettier"
-      ],
+      "extends": ["eslint:recommended", "prettier"],
       "rules": {
-        // Error for unused variables
-        "no-unused-vars": "error",
-        // Allow empty functions (common in Angular)
         "no-empty-function": "off",
-        // Disable no-undef as TypeScript handles this
         "no-undef": "off",
-        // Allow console.log for development
-        "no-console": "off"
+        "no-console": "off",
+        "no-unused-vars": "off"
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
+      "files": ["*.html"],
       "parser": "@angular-eslint/template-parser",
-      "extends": [
-        "eslint:recommended"
-      ],
+      "extends": ["eslint:recommended"],
       "rules": {}
     }
   ]
