@@ -25,7 +25,7 @@ export const menu: CoreMenu[] = [
         title: 'Products',
         translate: 'MENU.INVENTORY.PRODUCTS',
         type: 'item',
-        // role: ['Admin'], //? To set multiple role: ['Admin', 'Client']
+        // role: ['Admin'],
         icon: 'circle',
         url: 'inventory/products'
       },
@@ -237,7 +237,185 @@ export const menu: CoreMenu[] = [
     url: '/admin/pos'
   },
   {
-    id: 'apps',
+    id: 'settings',
+    type: 'section',
+    title: 'Settings',
+    translate: 'MENU.SETTINGS.SECTION',
+    icon: 'settings',
+    children: [
+      {
+        id: 'companySettings',
+        title: 'Company Settings',
+        translate: 'MENU.SETTINGS.COMPANY_SETTINGS',
+        type: 'item',
+        // role: ['Admin'], //? To set multiple role: ['Admin', 'Client']
+        icon: 'layout',
+        url: 'settings/company-settings'
+      },
+      {
+        id: 'appSettings',
+        title: 'App Settings',
+        translate: 'MENU.SETTINGS.APP_SETTINGS',
+        type: 'item',
+        // role: ['Admin'], //? To set multiple role: ['Admin', 'Client']
+        icon: 'settings',
+        url: 'settings/app-settings'
+      },
+      {
+        id: 'usersSettings',
+        title: 'Users Settings',
+        translate: 'MENU.SETTINGS.USERS_SETTINGS_COLLAPSIBLE',
+        type: 'collapsible',
+        // role: ['Admin'], //? To set multiple role: ['Admin', 'Client']
+        icon: 'users',
+        children: [
+          {
+            id: 'users',
+            title: 'Users',
+            translate: 'MENU.SETTINGS.USERS',
+            type: 'item',
+            icon: 'circle',
+            url: 'apps/user/user-list'
+          },
+          {
+            id: 'roles',
+            title: 'Roles',
+            translate: 'MENU.SETTINGS.ROLES',
+            type: 'item',
+            icon: 'circle',
+            url: 'settings/roles'
+          },
+          {
+            id: 'permissions',
+            title: 'Permissions',
+            translate: 'MENU.SETTINGS.PERMISSIONS',
+            type: 'item',
+            icon: 'circle',
+            url: 'settings/permissions'
+          },
+          {
+            id: 'designations',
+            title: 'Designations',
+            translate: 'MENU.SETTINGS.DESIGNATIONS',
+            type: 'item',
+            icon: 'circle',
+            url: 'settings/designations'
+          }
+        ]
+      },
+      {
+        id: 'inventorySettings',
+        title: 'Inventory',
+        translate: 'MENU.INVENTORY.COLLAPSIBLE',
+        type: 'collapsible',
+        // role: ['Admin'], //? To hide collapsible based on user role
+        icon: 'codesandbox',
+        children: [
+          {
+            id: 'categories',
+            title: 'Product Categories',
+            translate: 'MENU.INVENTORY.CATEGORIES',
+            type: 'item',
+            // role: ['Admin'],
+            icon: 'circle',
+            url: 'inventory/categories'
+          },
+          {
+            id: 'subcategories',
+            title: 'Product Subcategories',
+            translate: 'MENU.INVENTORY.SUBCATEGORIES',
+            type: 'item',
+            // role: ['Admin'],
+            icon: 'circle',
+            url: 'inventory/subcategories'
+          },
+          {
+            id: 'brands',
+            title: 'Product Brands',
+            translate: 'MENU.INVENTORY.BRANDS',
+            type: 'item',
+            // role: ['Admin'],
+            icon: 'circle',
+            url: 'inventory/brands'
+          },
+          {
+            id: 'units',
+            title: 'Porduct Units',
+            translate: 'MENU.INVENTORY.UNITS',
+            type: 'item',
+            // role: ['Admin'],
+            icon: 'circle',
+            url: 'inventory/units'
+          },
+          {
+            id: 'colors',
+            title: 'Porduct Colors',
+            translate: 'MENU.INVENTORY.COLORS',
+            type: 'item',
+            // role: ['Admin'],
+            icon: 'circle',
+            url: 'inventory/colors'
+          },
+          {
+            id: 'attributes',
+            title: 'Porduct Attributes',
+            translate: 'MENU.INVENTORY.ATTRIBUTES',
+            type: 'item',
+            // role: ['Admin'],
+            icon: 'circle',
+            url: 'inventory/attributes'
+          },
+          {
+            id: 'uom',
+            title: 'UoM',
+            translate: 'MENU.INVENTORY.UOM',
+            type: 'item',
+            // role: ['Admin'],
+            icon: 'circle',
+            url: 'inventory/uom'
+          },
+          {
+            id: 'importProducts',
+            title: 'Import Products',
+            translate: 'MENU.INVENTORY.IMPORT_PRODUCTS',
+            type: 'item',
+            // role: ['Admin'],
+            icon: 'circle',
+            url: 'inventory/import-products'
+          },
+          {
+            id: 'importProducts',
+            title: 'Barcode page settings',
+            translate: 'MENU.INVENTORY.IMPORT_PRODUCTS',
+            type: 'item',
+            // role: ['Admin'],
+            icon: 'circle',
+            url: 'inventory/import-products'
+          }
+        ]
+      },
+      {
+        id: 'purchaseSettings',
+        title: 'Purchase',
+        translate: 'MENU.PURCHASE.COLLAPSIBLE',
+        type: 'collapsible',
+        icon: 'plus-square',
+        children: [
+          {
+            id: 'suppliersSettings ',
+            title: 'Suppliers Settings ',
+            translate: 'MENU.PURCHASE.SUPPLIERS_SETTINGS',
+            type: 'item',
+            // role: ['Admin'], //? To set multiple role: ['Admin', 'Client']
+            icon: 'circle',
+            url: 'purchase/suppliers-settings'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'support',
     type: 'section',
     title: 'Support',
     translate: 'MENU.SUPPORT.SECTION',

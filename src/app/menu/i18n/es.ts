@@ -12,14 +12,23 @@ export const locale = {
       INVENTORY: {
         COLLAPSIBLE: 'Inventario',
         PRODUCTS: 'Productos',
-        SHORTAGE_PRODUCTS: 'Productos con Escasez'
+        SHORTAGE_PRODUCTS: 'Productos con Escasez',
+        CATEGORIES: 'Categorías de Productos',
+        SUBCATEGORIES: 'Subcategorías de Productos',
+        BRANDS: 'Marcas de Productos',
+        UNITS: 'Unidades de Productos',
+        COLORS: 'Colores de Productos',
+        ATTRIBUTES: 'Atributos de Productos',
+        UOM: 'Unidad de Medida',
+        IMPORT_PRODUCTS: 'Importar Productos'
       },
       PURCHASE: {
         COLLAPSIBLE: 'Compras',
         INVOICES: 'Facturas',
         SUPPLIERS: 'Proveedores',
         RETURN: 'Devolución de Compras',
-        ORDERS: 'Órdenes de Compra'
+        ORDERS: 'Órdenes de Compra',
+        SUPPLIERS_SETTINGS: 'Configuración de Proveedores'
       },
       SALE: {
         COLLAPSIBLE: 'Ventas',
@@ -46,6 +55,16 @@ export const locale = {
       },
       POS: {
         HOME: 'Punto de Venta'
+      },
+      SETTINGS: {
+        SECTION: 'Configuraciones',
+        COMPANY_SETTINGS: 'Configuración de Empresa',
+        APP_SETTINGS: 'Configuración de Aplicación',
+        USERS_SETTINGS_COLLAPSIBLE: 'Configuración de Usuarios',
+        USERS: 'Usuarios',
+        ROLES: 'Roles',
+        PERMISSIONS: 'Permisos',
+        DESIGNATIONS: 'Designaciones'
       },
       SUPPORT: {
         SECTION: 'Soporte'
